@@ -14,7 +14,7 @@ npm run serve
     - 轻量快速热更新
     - 真正的按需编译，不再等待整个应用编译完成
 ![alt text](image.png)
-### vite 创建工程
+- vite 创建工程
 ```
 npm init vite-app <project-name>
 cd <project-name>

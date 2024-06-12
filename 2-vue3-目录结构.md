@@ -10,8 +10,8 @@
 | index.html | 首页入口文件，你可以添加一些 meta 信息或统计代码啥的。 |
 | package.json | 项目配置文件。 |
 | README.md | 项目的说明文档，markdown 格式 |
-## index.html:启动页面
-> <div id="app">为后续的vue文件提供可替换的壳标签
+## index.html
+> 启动页面 <div id="app">为后续的vue文件提供可替换的壳标签
 ```
 <!DOCTYPE html>
 <html lang="">
@@ -32,10 +32,10 @@
 </html>
  
 ```
-## main.js:入口文件
-功能有两个：
+## main.js
+入口文件，功能有两个：
 > 1、导入vue框架；
-> 2、将App.vue的内容挂载(替换)到index.html的<div id="app"/>标签
+> 2、将App.vue的内容挂载(替换)到index.html的div id="app"标签
 
 ```
 import { createApp } from 'vue'
@@ -86,14 +86,13 @@ export default {
 </style>
  
 ```
-## HelloWorld.vue: 展示页面
+## HelloWorld.vue
+展示页面
 ```
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
   </div>
