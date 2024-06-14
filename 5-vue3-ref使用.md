@@ -1,4 +1,8 @@
 ## ref使用方式
+定义一个响应式的数据
+接收数据：基本类型 对象类型
+基本类型的数据：响应式靠Object.defineProperty()的get与set完成的
+对象类型的数据：内部“求助”了Vue3.0中的一个新函数——reactive函数
 - import引入
 ```
 import { ref } from 'vue';
