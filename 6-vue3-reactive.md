@@ -42,11 +42,15 @@ export default {
       person.hobbies[0] = 'play tennis';
       // console.log(name, age); //不是响应式的
     }
+    function deleteName() { // 删除
+        delete person.name;s
+    }
 
     //返回一个对象
     return {
       person,
-      changeInfo
+      changeInfo,
+      deleteName
     }
   }
 }
