@@ -1,0 +1,45 @@
+<template>
+    <h1>一个人信息</h1>
+    姓：<input type="text" v-model="person.firstName">
+    <br/>
+    名：<input type="text" v-model="person.lastName">
+    <span>全名：{{ fullName }}</span>
+</template>
+  
+<script>
+import {reactive, computed} from 'vue';
+export default {
+    name: 'DemoPage',
+    // computed: { // vue2写法
+    //     fullName() {
+    //         let {firstName, lastName} = this.person;
+    //         return `${firstName}-${lastName}`;
+    //     }
+    // },
+    setup() {
+        let person = reactive({
+            firstName: '张',
+            lastName: '三'
+        });
+        let fullName = computed(() => { // vue3写法
+            let {firstName, lastName} = person;
+            return `${firstName}-${lastName}`;
+        });
+        return {
+            person,
+            fullName
+        }
+    }
+    }
+</script>
+
+<style>
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+</style>
